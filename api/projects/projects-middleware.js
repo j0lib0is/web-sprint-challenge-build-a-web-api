@@ -18,6 +18,7 @@ const validateProjectId = (req, res, next) => {
 const projectSchema = yup.object({
 	name: yup.string().required(),
 	description: yup.string().required(),
+	completed: yup.bool().required()
 })
 
 const validateProjectBody = async (req, res, next) => {
